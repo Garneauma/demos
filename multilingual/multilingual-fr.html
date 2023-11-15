@@ -1,4 +1,4 @@
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 
 <head>
 	<meta charset="utf-8">
@@ -14,11 +14,6 @@
 			line-height: 1em;
 			min-height: 1em;
 			padding: 5px 7px;
-		}
-		@media screen and (max-width: 767px) {
-			#wb-lng .wb-dropdown .btn-link abbr {
-				display: inline !important;
-			}
 		}
 
 		#wb-lng .wb-dropdown .dropdown-menu {
@@ -47,6 +42,28 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
+
+		.wb-disable #wb-lng .wb-dropdown .btn { display: none; }
+
+		.wb-disable #wb-lng .wb-dropdown ul {
+			padding: 0;
+		}
+
+		.wb-disable #wb-lng .wb-dropdown ul li {
+			display: inline-block;
+			margin-left: .75em;
+		}
+
+		.wb-disable #wb-lng .wb-dropdown ul li.active a {
+			color: #333333;
+			text-decoration: none;
+		}
+
+		@media screen and (max-width: 767px) {
+			#wb-lng .wb-dropdown .btn-link abbr {
+				display: inline !important;
+			}
+		}
 	</style>
 </head>
 
@@ -55,7 +72,6 @@
 		<ul id="wb-tphp">
 			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Passer au contenu principal</a></li>
 			<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Passer à « À propos de ce site »</a></li>
-			<li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Passer à la version HTML simplifiée</a></li>
 		</ul>
 	</nav>
 
@@ -73,13 +89,13 @@
 						</button>
 						<ul>
 							<li>
-								<a lang="oj" href="multilingual-oj.html" hreflang="oj">Ojibway</a>
-							</li>
-							<li>
-								<a lang="en" href="multilingual-en.html" hreflang="en">English</a>
+								<a lang="en" href="multilingual-en.html" hreflang="en"><span class="hidden-xs">English</span><abbr title="English" class="visible-xs text-uppercase">en</abbr></a>
 							</li>
 							<li class="active">
-								<a lang="fr" href="multilingual-fr.html" hreflang="fr" aria-current="page">Français</a>
+								<a lang="fr" href="multilingual-fr.html" hreflang="fr" aria-current="page"><span class="hidden-xs">Français</span><abbr title="Français" class="visible-xs text-uppercase">fr</abbr></a>
+							</li>
+							<li>
+								<a lang="oj" href="multilingual-oj.html" hreflang="oj"><span class="hidden-xs">Ojibway</span><abbr title="Ojibway" class="visible-xs text-uppercase">oj</abbr></a>
 							</li>
 						</ul>
 					</div>

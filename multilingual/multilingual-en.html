@@ -15,11 +15,6 @@
 			min-height: 1em;
 			padding: 5px 7px;
 		}
-		@media screen and (max-width: 767px) {
-			#wb-lng .wb-dropdown .btn-link abbr {
-				display: inline !important;
-			}
-		}
 
 		#wb-lng .wb-dropdown .dropdown-menu {
 			left: auto;
@@ -47,15 +42,36 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
+
+		.wb-disable #wb-lng .wb-dropdown .btn { display: none; }
+
+		.wb-disable #wb-lng .wb-dropdown ul {
+			padding: 0;
+		}
+
+		.wb-disable #wb-lng .wb-dropdown ul li {
+			display: inline-block;
+			margin-left: .75em;
+		}
+
+		.wb-disable #wb-lng .wb-dropdown ul li.active a {
+			color: #333333;
+			text-decoration: none;
+		}
+
+		@media screen and (max-width: 767px) {
+			#wb-lng .wb-dropdown .btn-link abbr {
+				display: inline !important;
+			}
+		}
 	</style>
 </head>
 
 <body vocab="http://schema.org/" typeof="WebPage">
 	<nav>
-		<ul id="wb-tphp" class="wb-init wb-disable-inited">
+		<ul id="wb-tphp">
 			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
 			<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this site</a></li>
-			<li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a></li>
 		</ul>
 	</nav>
 
@@ -72,14 +88,14 @@
 							<abbr title="English" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">en</abbr>
 						</button>
 						<ul>
-							<li>
-								<a lang="oj" href="multilingual-oj.html" hreflang="oj">Ojibway</a>
-							</li>
 							<li class="active">
-								<a lang="en" href="multilingual-en.html" hreflang="en">English</a>
+								<a lang="en" href="multilingual-en.html" hreflang="en"><span class="hidden-xs">English</span><abbr title="English" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">en</abbr></a>
 							</li>
 							<li>
-								<a lang="fr" href="multilingual-fr.html" hreflang="fr" aria-current="page">Français</a>
+								<a lang="fr" href="multilingual-fr.html" hreflang="fr" aria-current="page"><span class="hidden-xs">Français</span><abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr></a>
+							</li>
+							<li>
+								<a lang="oj" href="multilingual-oj.html" hreflang="oj"><span class="hidden-xs">Ojibway</span><abbr title="Ojibway" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">oj</abbr></a>
 							</li>
 						</ul>
 					</div>
